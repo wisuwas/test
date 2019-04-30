@@ -1,0 +1,55 @@
+@import '../../styles/scss/variables/packageComponent';
+@import '../../styles/scss/mixins/mediaQuery';
+
+.PackageCard {
+  background-color: #fff;
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  &::after,
+  &::before {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  &__SideBanner {
+    width: $sideBarWidth;
+    content: '';
+    position: absolute;
+    height: 580px;
+    background-image: radial-gradient(#1face5 30%, #1c9ce4 60%, #1782e2 90%);
+    top: -20px;
+    box-shadow: 1px 3px 20px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  &__Container {
+    padding: 0 0 0 $sideBarWidth;
+
+    @include only-mobileDevice {
+      padding: 0;
+    }
+  }
+
+  &__Row {
+    margin: 10px auto;
+  }
+
+  &__PrivilegeContainer {
+    margin: 20px 0;
+  }
+
+  &__TableContainer {
+    margin: 30px auto 14px;
+  }
+
+  &__HeadBar {
+    @include show-only-mobileDevice(block);
+  }
+
+  &__SideBar {
+    @include show-only-desktop( block);
+  }
+}

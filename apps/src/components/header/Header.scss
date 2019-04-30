@@ -1,0 +1,111 @@
+@import "../../styles/scss/mixins/mediaQuery";
+@import "../../styles/scss/helpers";
+
+%item-in-right {
+  cursor: pointer;
+  margin: 16px 16px 16px 0;
+}
+
+%item-in-left {
+  cursor: pointer;
+}
+
+.Header {
+  transition: height .5s;
+  height: 60px;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e7e8;
+  color: #4a4a4a;
+
+
+  @include desktop {
+    height: 100px;
+  }
+
+  @include only-mobileDevice {
+    box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 0.37);
+    position: fixed;
+    z-index: 1000;
+  }
+
+  &__Container {
+    padding: 26px;
+    height: 48px;
+    text-align: center;
+  }
+
+  &__Logo {
+    transition: margin-top .5s;
+    cursor: pointer;
+    height: 32px;
+    margin-top: -12px;
+    align-self: center;
+    position: absolute;
+
+    @include desktop {
+      margin-top: 8px;
+    }
+  }
+
+  &__Separator {
+    height: 50px;
+    top: 4px;
+    transform: translateY(50%);
+    position: absolute;
+    border: 1px solid #999;
+
+    @include only-mobileDevice {
+      display: none;
+    }
+  }
+
+  &__LeftItem {
+    float: left;
+    position: relative;
+  }
+
+  .Profile {
+    @extend %item-in-left;
+    @extend %remove-button-style;
+    @include show-only-desktop(inline-block);
+    margin: 8px 8px 8px 16px;
+    min-width: 108px;
+
+    &__Name {
+      margin-right: 16px;
+    }
+  }
+
+  &__MenuButton {
+    @extend %remove-button-style;
+    @include show-only-mobileDevice(block);
+    position: absolute;
+    right: 15px;
+    top: 0;
+    transform: translateY(70%);
+  }
+
+  &__RightItem {
+    float: right;
+  }
+
+  &__Item {
+    @extend %item-in-right;
+    @extend %remove-button-style;
+    @include show-only-desktop(inline-block);
+  }
+
+  &__Item {
+    @extend %item-in-right;
+    @extend %remove-button-style;
+    @include show-only-desktop(inline-block);
+  }
+
+  &__LanguageFlag {
+    @extend %item-in-right;
+    @extend %remove-button-style;
+    @include show-only-desktop(inline-block);
+    margin-left: 4px;
+  }
+}

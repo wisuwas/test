@@ -1,0 +1,36 @@
+@font-face {
+  font-family: dtac2017;
+  src: url('../../../static/fonts/dtac2017_rg-webfont.woff');
+}
+
+@font-face {
+  font-family: dtac2017bd;
+  src: url('../../../static/fonts/dtac2017_bd-webfont.woff');
+}
+
+.dtac-2017 {
+  font-family: "dtac2017", sans-serif;
+  font-weight: normal !important;
+}
+.dtac-2017it {
+  font-family: "dtac2017bd", sans-serif;
+  font-style: italic;
+}
+.dtac-2017li {
+  font-family: "dtac2017bd", sans-serif;
+  font-weight: lighter;
+}
+.dtac-2017liit {
+  font-family: "dtac2017bd", sans-serif;
+  font-weight: lighter;
+  font-style: italic;
+}
+.dtac-2017bd {
+  font-family: "dtac2017bd", sans-serif;
+  font-weight: bold;
+}
+.dtac-2017bdit {
+  font-family: "dtac2017bd", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}

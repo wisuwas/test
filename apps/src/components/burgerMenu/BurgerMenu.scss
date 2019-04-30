@@ -1,0 +1,117 @@
+@import '../../styles/scss/mixins/mediaQuery';
+@import '../../styles/scss/helpers';
+
+%burger-menu-item {
+  @extend %remove-button-style;
+  padding: 16px 40px;
+  width: 100%;
+  text-align: start;
+  color: #fff;
+}
+
+.BurgerMenu {
+  background-color: #007ad0;
+  height: 100%;
+  color: #fff;
+
+  .Profile {
+    @extend %burger-menu-item;
+    @include show-only-mobileDevice(block);
+
+    &__Avatar {
+      color: #fff;
+    }
+
+    &__Name {
+      margin-left: 16px;
+    }
+  }
+
+  .MenuItem {
+    cursor: pointer;
+
+    @extend %burger-menu-item;
+
+    @include show-only-mobileDevice(block);
+
+    &--admin {
+      display: block;
+    }
+
+    &:hover, &:focus, &--active {
+      @extend %background-gradient-mobile;
+    }
+
+    &--active::after {
+      content: '';
+      height: 10px;
+      width: 100%;
+      background: rgba(0, 0, 0, 0) linear-gradient(180deg, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0) 90%);
+      position: absolute;
+      z-index: 1000;
+      top: 55px;
+      left: 0;
+      pointer-events: none;
+    }
+
+    &__BulletIcon {
+      margin-right: 16px;
+    }
+
+    &__LanguageFlag {
+      margin-left: 16px;
+      box-shadow: 1px 1px 2px -1px rgba(0,0,0,0.75);
+    }
+
+    &__SignOutIcon {
+      margin-left: 0 !important;
+      margin-right: 16px;
+    }
+
+    &__LoadingIcon {
+      margin-left: 16px;
+    }
+  }
+
+  .Separator {
+    margin: 0;
+    border-color: #fff;
+
+    @include show-only-mobileDevice(block);
+
+    &--admin {
+      display: block;
+    }
+  }
+
+  .MenuDropDown {
+    &__Container {
+      background-color: #1a5490;
+      display: none;
+      margin-bottom: 0;
+
+      &[data-active=true] {
+        display: block;
+      }
+
+      &::before {
+        content: '';
+        width: 0;
+        height: 0;
+        left: 30%;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid #1178b3;
+        position: absolute;
+      }
+    }
+
+    &__Item {
+      color: #fff;
+    }
+
+    &__ListItem {
+      padding: 15px 36px;
+    }
+  }
+}

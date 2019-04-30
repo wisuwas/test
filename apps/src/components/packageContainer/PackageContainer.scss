@@ -1,0 +1,21 @@
+@import '../../styles/scss/mixins/mediaQuery';
+
+.Package{
+  &__Container {
+    background: #1178b2 url("/static/img/bg-site.jpg") no-repeat center;
+    background-size: cover;
+    padding-top: 40px;
+
+    @include only-mobileDevice {
+      padding-top: 0;
+    }
+  }
+
+  &__Row {
+    padding: 40px 15px;
+
+    @include tablet {
+      padding: 40px 20px;
+    }
+  }
+}

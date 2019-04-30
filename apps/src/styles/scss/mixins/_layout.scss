@@ -1,0 +1,37 @@
+@mixin clearFix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin placeholer {
+  &::placeholder {
+    @content
+  }
+
+  &:-ms-input-placeholder {
+    @content
+  }
+
+  &::-ms-input-placeholder {
+    @content
+  }
+}
+
+@mixin rightDrop($length) {
+  & {
+    position: relative;
+  }
+
+  &::after {
+    content: '';
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1) 30%, rgba(0, 0, 0, 0));
+    width: $length;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -$length;
+  }
+}

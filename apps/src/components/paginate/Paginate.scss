@@ -1,0 +1,48 @@
+$base-blue: #06ace6;
+$hover-blue: #053570;
+%link {
+  color: $base-blue;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    color: $hover-blue;
+    text-decoration: none;
+  }
+}
+
+.Paginate {
+  margin: 10px 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 4px 10px;
+    margin: 2px;
+  }
+
+  &__Break {
+    color: $base-blue;
+  }
+
+  &__Page {
+    margin: 0 5px;
+
+    &--active {
+      border: 2px solid $base-blue;
+      border-radius: 20px;
+    }
+  }
+
+  &__Previous,
+  &__Next {
+    margin: 0 5px;
+  }
+
+  &__PreviousLink,
+  &__NextLink,
+  &__PageLink {
+    @extend %link;
+  }
+}

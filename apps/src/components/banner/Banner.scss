@@ -1,0 +1,28 @@
+.Banner {
+  width: 100%;
+  position: relative;
+  display: block;
+
+  &__FloatImage {
+    max-width: 100%;
+    position: absolute;
+    left: 0;
+  }
+
+  &__FloatRibbon {
+    position: absolute;
+    width: 100%;
+
+    &--noHeadImage {
+      top: 21px;
+    }
+
+    &--lifted {
+      bottom: 60px;
+    }
+  }
+
+  &__Image {
+    width: 100%;
+  }
+}

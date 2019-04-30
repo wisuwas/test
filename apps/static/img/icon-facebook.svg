@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="37px" height="37px" viewBox="0 0 37 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>icon fb</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="dtac-Web_Homepage" transform="translate(-1016.000000, -638.000000)">
+            <g id="Footer" transform="translate(0.000000, 619.000000)">
+                <g id="Social" transform="translate(889.000000, 20.000000)">
+                    <g id="Icon-Social" transform="translate(128.000000, 0.000000)">
+                        <g id="icon-fb">
+                            <path d="M35,17.5004971 C35,27.1649953 27.1647727,35 17.5,35 C7.83522727,35 0,27.1649953 0,17.5004971 C0,7.83500469 7.83522727,0 17.5,0 C27.1647727,0 35,7.83500469 35,17.5004971 Z" id="Stroke-1" stroke="#FFFFFF" stroke-width="2"></path>
+                            <path d="M19.2763938,12.9616275 C19.2763938,12.2590142 19.7214709,12.0952696 20.0346382,12.0952696 L21.9572954,12.0952696 L21.9572954,9.01091631 L19.3077106,9 C16.3686833,9 15.6996441,11.3003639 15.6996441,12.7730731 L15.6996441,14.8283162 L14,14.8283162 L14,18.0069467 L15.6996441,18.0069467 L15.6996441,27 L19.2754448,27 L19.2754448,18.0069467 L21.6877817,18.0069467 L22,14.8293086 L19.2763938,14.8293086 L19.2763938,12.9616275 Z" id="FB-Icon" fill="#FFFFFF"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

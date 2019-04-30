@@ -1,0 +1,36 @@
+@import "../../styles/scss/mixins/mediaQuery";
+
+.DMessageStep {
+  &__StepContainer {
+    display: flex;
+    margin: 30px 0 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include mobile {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  &__Title {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  &__Step {
+    margin: 20px 30px;
+
+    @include mobile {
+      width: 100%;
+      margin: 20px 0;
+    }
+  }
+
+  &__StepIndex {
+    padding: 6px 11px;
+    border-radius: 18px;
+    border: 1px solid #fff;
+    margin-right: 6px;
+  }
+}

@@ -1,0 +1,24 @@
+version: '2'
+services:
+  smeweb-client:
+    container_name: smeweb-client
+    image: smeweb-client:17
+    mem_limit: 200m
+    stdin_open: true
+    tty: true
+    restart: always
+    ports:
+      - "20443:20443"
+    volumes:
+      - ../../logs/smeweb-client:/logs
+    environment:
+      - TZ=/usr/share/zoneinfo/Asia/Bangkok
+    logging:
+      driver: "json-file"
+      options:
+        max-size: 20m
+        max-file: "5"
+    extra_hosts:
+      # - "violet12:10.89.91.38"
+      # - "violet13:10.89.91.39"
+      - "api.smeweb:10.94.8.94"

@@ -1,0 +1,59 @@
+@import '../../styles/scss/mixins/mediaQuery';
+@import '../../styles/scss/mixins/layout';
+
+.RegisterCard {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 0.37);
+  display: flex;
+  max-width: 1080px;
+  width: 100%;
+  flex-direction: row;
+  margin: 20px;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  &__SideBar {
+    display: inline-block;
+    position: relative;
+
+    @include rightDrop(10px);
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__HeadBar {
+    display: block;
+
+    @include desktop {
+      display: none;
+    }
+
+    @include tablet  {
+      display: none;
+    }
+  }
+
+  &__Container {
+    display: inline-block;
+    padding: 40px;
+    width: 100%;
+
+    @include mobile {
+      padding: 30px;
+    }
+  }
+
+  &__RegisterText {
+    margin-bottom: 15px;
+  }
+
+  &__Register {
+    text-align: start;
+    padding: 10px;
+  }
+}

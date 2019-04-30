@@ -1,0 +1,15 @@
+@import '../styles/scss/mixins/mediaQuery';
+
+.Link {
+    &--a {
+        color: inherit;
+        &:hover {
+            color: inherit;
+
+            @include desktop {
+                color: #ccc;
+            }
+            text-decoration: none;
+        }
+    }
+}

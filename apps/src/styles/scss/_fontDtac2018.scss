@@ -1,0 +1,36 @@
+@font-face {
+  font-family: dtac2018;
+  src: url('../../../static/fonts/DTAC2018-Regular.woff');
+}
+
+@font-face {
+  font-family: dtac2018bd;
+  src: url('../../../static/fonts/DTAC2018-Bold.woff');
+}
+
+.dtac-2018 {
+  font-family: "dtac2018";
+  font-weight: normal !important;
+}
+.dtac-2018it {
+  font-family: "dtac2018bd";
+  font-style: italic;
+}
+.dtac-2018li {
+  font-family: "dtac2018bd";
+  font-weight: lighter;
+}
+.dtac-2018liit {
+  font-family: "dtac2018bd";
+  font-weight: lighter;
+  font-style: italic;
+}
+.dtac-2018bd {
+  font-family: "dtac2018bd";
+  font-weight: bold;
+}
+.dtac-2018bdit {
+  font-family: "dtac2018bd";
+  font-weight: bold;
+  font-style: italic;
+}

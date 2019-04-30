@@ -1,0 +1,15 @@
+@import '../../styles/scss/mixins/mediaQuery';
+
+.ReportContainer {
+  padding: 40px 0;
+  background-color: #e0edf3;
+
+  @include mobile {
+    padding: 10px 0;
+  }
+
+  &__Row {
+    display: flex;
+    justify-content: center;
+  }
+}

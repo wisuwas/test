@@ -1,0 +1,15 @@
+.PackageContent {
+    font-size: 16px;
+    display: inline-block;
+    &.TextHeader {
+        color :#06ACE7;
+    }
+    &.TextSubheader {
+        color: #4A4A4A;
+    }
+    &.TextContent {
+        font-size: 14px;
+        color: #989898;
+        padding-bottom: 20px;
+    }
+}

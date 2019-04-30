@@ -1,0 +1,20 @@
+.DMessageBanner {
+  color: white;
+  display: table;
+
+  &__Header {
+    font-size: 32px;
+    margin-bottom: 13px;
+  }
+
+  &__PromoTable {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 17px;
+  }
+
+  &__FootNote {
+    margin-top: 14px;
+    font-size: 14px;
+  }
+}

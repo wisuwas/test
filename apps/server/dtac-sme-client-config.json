@@ -1,0 +1,5 @@
+{
+  "dtacSmeApi": "http://localhost:20080",
+  "port": 31101,
+  "logDirectory": "./server/logs"
+}

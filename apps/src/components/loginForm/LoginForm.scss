@@ -1,0 +1,67 @@
+@import "../../styles/scss/mixins/mediaQuery";
+
+%menu-button {
+  border: 2px solid #fff;
+  background: none;
+  padding: 0 5px;
+  color: #fff;
+  cursor: pointer;
+  max-width: 100px;
+  width: 40%;
+}
+
+.LoginForm {
+  padding: 16px 40px;
+  display: table;
+  width: 84%;
+  max-width: 360px;
+
+  @include desktop {
+    width: 100%;
+  }
+
+  &__Row {
+    display: table-row;
+
+    .Title {
+      padding: 12px 0 4px;
+    }
+  }
+
+  &__Cell {
+    display: table-cell;
+    min-width: 100px;
+  }
+
+  &__Input {
+    border: 2px solid #fff;
+    width: 100%;
+    margin-bottom: 10px;
+
+    &--hasError {
+      border: 2px solid #8f0016;
+    }
+  }
+
+  &__LoadingIcon {
+    margin-left: 10px;
+    color: #4aafff;
+  }
+
+  &__SubmitButton {
+    @extend %menu-button;
+  }
+
+  &__CancelButton {
+    @extend %menu-button;
+    float: right;
+
+    @include show-only-mobileDevice(block);
+  }
+
+  &__ButtonContainer {
+    @include desktop {
+      margin-top: 5px;
+    }
+  }
+}

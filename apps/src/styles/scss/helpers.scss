@@ -1,0 +1,18 @@
+%remove-button-style {
+   border: none;
+   background: none;
+ }
+
+%center-vertical-child {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+%background-gradient {
+  background: #005d9c linear-gradient(169deg, #1178b2 0%, #1178b2 50%, #155292 51%, #155292 90%);
+}
+
+%background-gradient-mobile {
+  background: #005d9c linear-gradient(172deg, #1178b2 0%, #155292 75%, #155292 90%);
+}

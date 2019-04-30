@@ -1,0 +1,64 @@
+@import '../../styles/scss/mixins/mediaQuery';
+@import '../../styles/scss/mixins/layout';
+
+%padding-right {
+  padding-right: 40px;
+
+  @include only-mobileDevice {
+    padding-right: 0;
+  }
+}
+
+.FormRegister {
+  &__Container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+  }
+
+  &__InputBlock {
+    @extend %padding-right;
+    width: 50%;
+    margin: 12px 0;
+
+    @include only-mobileDevice {
+      width: 100%;
+    }
+  }
+
+  &__ErrorMessage {
+    position: absolute;
+    font-size: 14px;
+    color: red;
+  }
+
+  &__InputLable {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  &__ErrorBox {
+    @extend %padding-right;
+  }
+
+  &__InputBox {
+    display: block;
+    width: 100%;
+    padding: 7px 10px;
+    border-radius: 7px;
+    border: 1px solid #a1a2a3;
+
+    @include placeholer {
+      color: #a1a2a3;
+      opacity: .5;
+    }
+
+    &--error {
+      border-color: red;
+    }
+  }
+
+  &__ButtonContainer {
+    text-align: center;
+  }
+}

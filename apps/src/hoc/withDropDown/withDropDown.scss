@@ -1,0 +1,19 @@
+.DropDown {
+  position: relative;
+
+  &__Container {
+    z-index: 1000;
+    list-style-type: none;
+  }
+
+  &__Item {
+    color: #666;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      color: #666;
+      text-decoration: none;
+    }
+  }
+}

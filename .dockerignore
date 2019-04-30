@@ -1,0 +1,5 @@
+**/node_modules/
+*.tar
+apps/server/dtac-sme-client-config.json
+.git
+.idea

@@ -1,0 +1,80 @@
+@import "../../styles/scss/mixins/mediaQuery";
+@import "../../styles/scss/helpers";
+
+.DMessage {
+  &__Banner {
+    width: 100%;
+    height: 720px;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    background-repeat: no-repeat;
+
+    @include desktop {
+      background-image: url("/static/img/dMessage/splash.jpg");
+      height: 720px;
+    }
+
+    @include only-mobileDevice {
+      background-image: url("/static/img/dMessage/splash-mobile.jpg");
+    }
+
+    @include mobile {
+      height: 480px;
+      background-color: #e59830;
+    }
+  }
+
+  &__BannerTable {
+    position: absolute;
+    text-align: center;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include only-mobileDevice {
+      left: 50%;
+      top: 60%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__Container {
+    color: #fff;
+    background: radial-gradient(#06ace7, #0686e7);
+    padding: 40px;
+
+    @include mobile {
+      padding: 40px 20px;
+    }
+  }
+
+  &__Logo {
+    width: 60%;
+    max-width: 260px;
+    margin-left: -10px;
+    margin-bottom: 36px;
+  }
+
+  &__FeatureContainer {
+    max-width: 1280px;
+    margin: auto;
+  }
+
+  &__Subtitle {
+    font-size: 20px;
+    max-width: 960px;
+    width: 80%;
+    margin: auto auto 10px;
+  }
+
+  &__Separator {
+    margin: auto;
+    border-color: #fff;
+    max-width: 1080px;
+  }
+
+  &__StepContainer {
+    margin: 30px 0;
+  }
+}

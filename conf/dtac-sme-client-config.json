@@ -1,0 +1,5 @@
+{
+  "dtacSmeApi": "http://api.smeweb:21080",
+  "port": 20443,
+  "logDirectory": "/logs"
+}

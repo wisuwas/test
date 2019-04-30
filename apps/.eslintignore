@@ -1,0 +1,4 @@
+# production
+.next/*
+static/*
+storybook-static/*

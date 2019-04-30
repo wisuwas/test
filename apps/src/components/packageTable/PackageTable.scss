@@ -1,0 +1,115 @@
+@import "../../styles/scss/mixins/mediaQuery";
+
+$discountPink: #e5258e;
+
+%table-cell-border {
+  border: 1px solid #fff;
+}
+
+.PackageTable {
+  &__Table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 610px;
+  }
+
+  &__HeadCell {
+    @extend %table-cell-border;
+    background-color: #155292;
+
+    padding: 10px 15px;
+
+    @include mobile {
+      padding: 10px 5px;
+    }
+
+    line-height: 18px;
+    color: #fff;
+
+    &--yellow, &--registerLink {
+      background-color: #fedb31;
+      color: #155292;
+    }
+
+    &--pink, &--discount {
+      background-color: $discountPink;
+    }
+  }
+
+  &__HeadRow {
+    th:first-child {
+      border-top-left-radius: 10px;
+    }
+
+    th:last-child {
+      border-top-right-radius: 10px;
+    }
+  }
+
+  &__Container {
+    padding: 0 20px 0 20px;
+    overflow-x: auto;
+
+    &--paddingForLabel {
+      padding-left: 40px;
+    }
+  }
+
+  &__RowGroup {
+    color: #0a2247;
+  }
+
+  &__Cell {
+    @extend %table-cell-border;
+    padding: 14px 5px;
+    background: #f1f5f6;
+
+    .RegisterButton {
+      display: inline-block;
+      padding: 0 12px;
+
+      &__Icon {
+        margin-left: 5px;
+        margin-bottom: -1px;
+        @include only-phone {
+          display: none;
+        }
+      }
+    }
+
+    .Fee {
+      width: 50%;
+      display: inline-block;
+
+      &--actual {
+        position: relative;
+
+        &::after {
+          content: '';
+          border-bottom: 2px solid #e5258e;
+          width: 100%;
+          position: absolute;
+          top: 10px;
+          left: 0;
+        }
+      }
+
+      &--discount {
+        color: $discountPink;
+      }
+    }
+
+    &--lightBlue {
+      background-color: #b4c8e4;
+    }
+
+    &--lightYellow {
+      background-color: #ffeea9;
+    }
+
+    &--lightPink {
+      background-color: #fbd2de;
+    }
+  }
+}

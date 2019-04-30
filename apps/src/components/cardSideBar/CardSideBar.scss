@@ -1,0 +1,80 @@
+@import '../../styles/scss/variables/packageComponent';
+@import '../../styles/scss/mixins/mediaQuery';
+
+.CardSideBar {
+  width: $sideBarWidth;
+  height: 100%;
+
+  &--overFlow {
+    height: 111%;
+    transform: translateY(-5%);
+    position: absolute;
+    box-shadow: 1px 3px 20px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  &__Container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include only-mobileDevice {
+      flex-direction: column;
+    }
+  }
+
+  .Ads {
+    height: 100%;
+    background-image: radial-gradient(#1face5 30%, #1c9ce4 60%, #1782e2 90%);
+    color: #fff;
+
+    &__Container {
+      padding: 20px 34px 34px;
+
+      &--ribbon {
+        padding-top: 90px;
+      }
+
+      &--noImage {
+        padding-top: 166px;
+      }
+
+      &--narrow {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+
+    &__Content {
+      text-align: start;
+      font-size: 21px;
+
+      &--small {
+        font-size: 16px;
+      }
+
+      &--narrow {
+        width: 80%
+      }
+    }
+
+    &__Separator {
+      border-top: 1px solid rgb(255, 255, 255);
+    }
+
+    &__InnerImage {
+      margin: 20px 0 40px;
+      height: 100%;
+      width: 90%;
+    }
+
+    &__Bullets {
+      ul {
+        padding: 0;
+        padding-left: 1.5em;
+        text-align: left;
+        list-style-image: url('/static/img/check-icon.png');
+      }
+    }
+  }
+}

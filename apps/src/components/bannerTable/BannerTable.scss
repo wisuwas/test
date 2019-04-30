@@ -1,0 +1,90 @@
+@import "../../styles/scss/mixins/mediaQuery";
+@import "../../styles/scss/helpers";
+
+$border-radius: 17px;
+
+.BannerTable {
+  &__dImageLogo {
+    width: 70px;
+    margin-bottom: 10px;
+  }
+
+  &__dLogo {
+    padding: 25px 35px 20px;
+    font-size: 18px;
+
+    @include mobile {
+      padding: 12px 17px 10px;
+    }
+  }
+
+  &__Head {
+    font-size: 18px;
+    font-weight: 100;
+    border: 1px solid #fff;
+    background: #09bcec linear-gradient(90deg, #09bcec, #0ed6f5);
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__RegisterButton {
+    padding: 0 10px;
+
+    &:hover {
+      color: #fff !important;
+    }
+  }
+
+  &__RegisterIcon {
+    margin-left: 10px;
+  }
+
+  &__RegisterButtonContainer {
+    position: absolute;
+    font-size: 14px;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: table;
+
+    @include mobile {
+      bottom: 8px;
+    }
+  }
+
+  &__Cell {
+    font-size: 18px;
+    border: 1px solid #fff;
+    color: #0077b5;
+    background-color: #f1f5f6;
+    padding: 20px 20px;
+    position: relative;
+
+    @include mobile {
+      font-size: 16px;
+      padding: 20px 10px;
+    }
+  }
+
+  &__CellText {
+    margin-bottom: 10px;
+  }
+
+  .br-tl {
+    border-top-left-radius: $border-radius;
+  }
+
+  .br-tr {
+    border-top-right-radius: $border-radius;
+  }
+
+  .br-bl {
+    border-bottom-left-radius: $border-radius;
+  }
+
+  .br-br {
+    border-bottom-right-radius: $border-radius;
+  }
+}

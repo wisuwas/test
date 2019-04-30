@@ -1,0 +1,29 @@
+.RoundedButton {
+  color: #666;
+  background-color: #fff;
+  border: 3px solid #00adef;
+  border-radius: 23px;
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+  transition: background-color .3s ease, border-color .3s ease, color .3s ease;
+
+  &:hover {
+    border-color: #fff;
+    background-color: #00adef;
+    color: #fff;
+  }
+
+  &--l {
+    border: 7px solid #00adef;
+    height: 46px;
+    padding: 0 24px;
+    box-shadow: 0 4px 0 0 rgba(0,0,0,0.2);
+  }
+
+  &--link {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

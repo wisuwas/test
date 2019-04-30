@@ -1,0 +1,21 @@
+@import '../../styles/scss/mixins/mediaQuery';
+
+.Layout {
+  &__Container {
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+  }
+
+  &__BurgerMenu {
+    @include only-mobileDevice {
+      padding-top: 60px;
+    }
+  }
+
+  &--menuOpen {
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+  }
+}

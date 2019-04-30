@@ -1,0 +1,154 @@
+@import '../../styles/scss/mixins/mediaQuery';
+
+@mixin max-support-display {
+  @media (min-width: 1300px) {
+    @content;
+  }
+}
+
+
+.Detail {
+  border-top: 1px solid #a1a2a3;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+
+  &--doubleLine {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &__Container {
+    &--dl {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: flex-end;
+      margin-bottom: 10px;
+    }
+  }
+
+  @include tablet {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  @include max-support-display {
+    flex-wrap: nowrap;
+  }
+
+  &__QualifiedMember {
+    text-align: start;
+    margin-right: 5px;
+  }
+
+  &--first {
+    border-top: none;
+  }
+
+  &__Logo {
+    height: 26px;
+    margin-right: 7px;
+  }
+
+  &__Text {
+    position: relative;
+    top: -4px;
+    flex-grow: 2;
+    text-align: end;
+
+    &--alignStart {
+      text-align: start;
+    }
+
+    @include mobile {
+      text-align: start;
+    }
+  }
+
+  &__AllDtac {
+    text-align: start;
+  }
+
+  &__AllLogo {
+    width: 220px
+  }
+
+  &__CallCode {
+    border-radius: 20px;
+    background-color: #1eade5;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+
+    &--full {
+      margin-left: 20px;
+    }
+
+    &--alignStart {
+      margin-left: 0;
+    }
+
+    &--doubleLine-in {
+      display: block;
+
+      @include only-mobileDevice {
+        display: none;
+      }
+    }
+
+    &--doubleLine-out {
+      display: none;
+
+      @include only-mobileDevice {
+        display: block;
+      }
+    }
+
+    @include only-mobileDevice {
+      margin-left: 0;
+    }
+
+    .CallCode {
+      color: #73d6f6 !important;
+      padding: 6px 15px;
+      display: flex;
+      align-items: center;
+      min-width: 190px;
+      justify-content: space-between;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      @include desktop {
+        pointer-events: none;
+      }
+
+      &__Code {
+        color: #fff;
+        margin: 0 1%;
+        font-size: 20px;
+        line-height: 10px;
+        position: relative;
+        top: 3px;
+        flex-grow: 2;
+
+        .icon {
+          font-size: 12px;
+          position: relative;
+          top: -3px;
+        }
+      }
+
+      &__Icon {
+        color: #fff;
+        transform: scaleX(-1);
+        font-size: 20px;
+        position: relative;
+        top: 0;
+      }
+    }
+  }
+}

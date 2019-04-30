@@ -1,0 +1,1 @@
+0   0   *   *   *   (cd /logs/; unlink smeweb_DEBUG.log; ln -s smeweb_DEBUG.log.$(date '+%Y%m%d') smeweb_DEBUG.log;)

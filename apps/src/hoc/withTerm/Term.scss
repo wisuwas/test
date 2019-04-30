@@ -1,0 +1,66 @@
+@import '../../styles/scss/mixins/mediaQuery';
+
+%container-in-term {
+  position: absolute;
+  right: 0;
+}
+
+.Term {
+  position: relative;
+
+  &__Icon {
+    padding: 0 9px;
+    border-radius: 18px;
+    margin-right: 6px;
+    border: 1px solid;
+  }
+
+  &__Link {
+    &--floating {
+      @extend %container-in-term;
+    }
+
+    top: -25px;
+    cursor: pointer;
+    background: none;
+    display: inline;
+
+    &:hover, &:active, &:focus {
+      border-bottom: 1px solid;
+    }
+  }
+
+  &__Tooltip {
+    @extend %container-in-term;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px 20px 20px 0;
+    top: 10px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.25882352941176473);
+    border-radius: 12px;
+    width: 80%;
+    max-width: 870px;
+    z-index: 1000;
+
+    @include mobile {
+      width: 90%;
+    }
+
+
+    &::before {
+      content: '';
+      width: 0;
+      height: 0;
+      right: 16px;
+      top: -6px;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #fff;
+      position: absolute;
+    }
+  }
+
+  &__List {
+    text-align: start;
+    list-style-type: disc;
+  }
+}
